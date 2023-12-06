@@ -63,6 +63,6 @@ parseRound round = foldl combine emptyRound $ map parseColour $ splitOn "," roun
         combine round' (Green quantity) = round' {green = quantity}
 
 parseColour :: Text -> Colour
-parseColour (stripSuffix "red" -> Just quantity) = Red ((read.unpack) quantity)
-parseColour (stripSuffix "blue" -> Just quantity) = Blue ((read.unpack) quantity)
-parseColour (stripSuffix "green" -> Just quantity) = Green ((read.unpack) quantity)
+parseColour (stripSuffix "red" -> Just quantity) = Red ((read . unpack) quantity)
+parseColour (stripSuffix "blue" -> Just quantity) = Blue ((read . unpack) quantity)
+parseColour (stripSuffix "green" -> Just quantity) = Green ((read . unpack) quantity)
