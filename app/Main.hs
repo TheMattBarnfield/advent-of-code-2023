@@ -1,11 +1,11 @@
 module Main where
 
-import Day01
+import Day03
 
 main :: IO ()
 main = do
-    input <- readFileLines "inputs/Day01.txt"
-    let output = day01part2 input
+    input <- readFileLines "inputs/Day03.txt"
+    let output = day03part2 input
     putStrLn output
 
 readFileLines :: String -> IO [String]
