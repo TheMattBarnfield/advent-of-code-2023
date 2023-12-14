@@ -1,12 +1,14 @@
 module Main where
 
-import Day04
+import Data.Text (Text, pack)
+import Day05
 
 main :: IO ()
 main = do
-    input <- readFileLines "inputs/Day04.txt"
-    let output = day04part2 input
-    putStrLn output
+    input <- readFileLines "inputs/Day05.txt"
+    print $ day05 input
 
-readFileLines :: String -> IO [String]
-readFileLines fileName = lines <$> readFile fileName
+readFileLines :: String -> IO [Text]
+readFileLines fileName = do
+    input <- readFile fileName
+    return $ map pack $ lines input
