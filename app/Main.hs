@@ -1,12 +1,12 @@
 module Main where
 
 import Data.Text (Text, pack)
-import Day05
+import Day06
 
 main :: IO ()
 main = do
-    input <- readFileLines "inputs/Day05.txt"
-    print $ day05 input
+    input <- readFileLines "inputs/Day06.txt"
+    print $ part2 input
 
 readFileLines :: String -> IO [Text]
 readFileLines fileName = do
